@@ -1,0 +1,12 @@
+
+/* - ploneCustom.css - */
+@media all {
+/* http://glazes.org/portal_css/ploneCustom.css?original=1 */
+.portletHeader {
+display: block !important;
+}
+.portletItem {
+text-align: left;
+}
+}
+

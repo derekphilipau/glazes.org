@@ -1,0 +1,990 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en">
+
+  
+    
+    
+    
+    
+    
+
+  
+
+  
+<!-- Mirrored from glazes.org/understanding-glazes/the-grid-method/inside-the-base-glaze by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 29 Nov 2008 00:39:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+
+    <meta http-equiv="Content-Type"
+          content="text/html;charset=utf-8" />
+
+    
+      <base  /><!--[if lt IE 7]></base><![endif]-->
+    
+
+    <meta name="generator" content="Plone - http://plone.org" />
+
+    <link rel="kss-base-url" href="inside-the-base-glaze.html" />
+
+  
+  
+    
+      <script type="text/javascript"
+              src="../../portal_javascripts/GlazesTheme/event-registration-cachekey5101.js">
+      </script>
+    
+    
+  
+
+  
+  
+    
+    
+      <style type="text/css"><!-- @import url(../../portal_css/GlazesTheme/base-cachekey5439.css); --></style>
+    
+    
+  
+
+  
+    
+    
+      <style type="text/css" media="all"><!-- @import url(../../portal_css/GlazesTheme/++resource++glazestheme.stylesheets/main.css); --></style>
+    
+    
+  
+
+  
+    
+    
+      <style type="text/css" media="all"><!-- @import url(../../portal_css/GlazesTheme/ploneCustom.css); --></style>
+    
+    
+  
+
+  
+  <link rel="kinetic-stylesheet" type="text/css"
+        href="http://glazes.org/portal_kss/GlazesTheme/at-cachekey2392.css" />
+
+
+<title>Inside the Base Glaze &mdash; Portal</title>
+
+    <meta content="The variables in the base glaze, and how we separate them out to study their effect"
+          name="description" />
+
+    <!-- Internet Explorer CSS Fixes -->
+    <!--[if IE]>
+        <style type="text/css" media="all">@import url(http://glazes.org/IEFixes.css);</style>
+    <![endif]-->
+
+    
+    <link rel="author"
+          href="http://glazes.org/author/andreametz.html"
+          title="Author information" />
+
+
+    <link rel="shortcut icon" type="image/x-icon"
+          href="http://glazes.org/favicon.ico" />
+
+
+    <link rel="home" href="../../index.html"
+          title="Front page" />
+
+    <link rel="contents" href="../../sitemap.html"
+          title="Site Map" />
+
+
+
+    <link rel="previous"
+          href="base-glaze.html"
+          title="Go to previous item" />
+
+    <link rel="next"
+          href="the-grid-layout.html"
+          title="Go to next item" />
+
+
+
+
+    <link rel="search" href="http://glazes.org/search_form.html"
+          title="Search this site" />
+
+
+    
+
+    <!-- Disable IE6 image toolbar -->
+    <meta http-equiv="imagetoolbar" content="no" />
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+  </head>
+
+  <body class="section-understanding-glazes template-document_view"
+        dir="ltr">
+    <div id="visual-portal-wrapper">
+
+      <div id="portal-top">
+        <div id="portal-header">
+<p class="hiddenStructure">
+  <a accesskey="2"
+     href="inside-the-base-glaze.html#documentContent">Skip to content.</a> |
+
+  <a accesskey="6"
+     href="inside-the-base-glaze.html#portlet-navigation-tree">Skip to navigation</a>
+</p>
+
+
+    <h5 class="hiddenStructure">Sections</h5>
+
+    <ul id="portal-globalnav">
+        <li id="portaltab-index_html" class="plain">
+            <a href="../../index.html" title="">Home</a></li>
+        <li id="portaltab-understanding-glazes"
+            class="selected">
+            <a href="../../understanding-glazes.html"
+               title="">Glazes</a></li>
+        <li id="portaltab-gallery" class="plain">
+            <a href="../../gallery.html" title="">Gallery</a></li>
+        <li id="portaltab-workshops" class="plain">
+            <a href="../../workshops.html" title="">Workshops</a></li>
+        <li id="portaltab-books" class="plain">
+            <a href="../../books.html" title="">Books</a></li>
+        <li id="portaltab-resources" class="plain">
+            <a href="../../resources.html" title="">Resources</a></li>
+        <li id="portaltab-about-ian" class="plain">
+            <a href="../../about-ian.html" title="">About Ian</a></li>
+    </ul>
+
+</div>
+
+
+    
+
+      </div>
+
+      <div class="visualClear" id="clear-space-before-wrapper-table"><!-- --></div>
+
+      <table id="portal-columns">
+        <tbody>
+          <tr>
+            
+            <td id="portal-column-one">
+              <div class="visualPadding">
+                
+                  
+<div id="portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f506c6f6e650a6e617669676174696f6e"
+     class="portletWrapper kssattr-portlethash-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f506c6f6e650a6e617669676174696f6e">
+<dl class="portlet portletNavigationTree">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <a href="../../sitemap.html" class="tile">Navigation</a>
+       
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem lastItem">
+        <ul class="portletNavigationTree navTreeLevel0">
+            <li class="navTreeItem">
+                <div>
+                   <a href="../../index.html" class=""
+                      title="">
+                   <img src="../../site_icon.gif"
+                        height="16" width="16" alt="" />
+                   Home
+                   
+                   </a>
+                </div>
+            </li>
+            
+
+
+
+<li class="navTreeItem visualNoMarker navTreeItemInPath navTreeFolderish">
+
+    
+
+      <div>
+
+        <a href="../../understanding-glazes.html"
+           class="state-published navTreeItemInPath navTreeFolderish"
+           title="">
+            <img width="16" height="16" src="../../folder_icon.gif" alt="Folder" />
+            <span>Glazes</span>
+        </a>
+        
+    </div>
+
+    <ul class="navTree navTreeLevel1">  
+        
+
+
+
+<li class="navTreeItem visualNoMarker navTreeItemInPath navTreeFolderish">
+
+    
+
+      <div>
+
+        <a href="../the-grid-method.html"
+           class="state-published navTreeItemInPath navTreeFolderish"
+           title="A short outline of how the grid method works - The Grid Method while standing on one leg.">
+            <img width="16" height="16" src="../../folder_icon.gif" alt="Folder" />
+            <span>The Grid Method</span>
+        </a>
+        
+    </div>
+
+    <ul class="navTree navTreeLevel2">  
+        
+
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+      <div>
+
+        <a href="one-legged-version.html"
+           class="state-published"
+           title="Introducing the main variables in a glaze">
+            <img width="16" height="16" src="../../document_icon.gif" alt="Document" />
+            <span>The Main Variables</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+      <div>
+
+        <a href="base-glaze.html"
+           class="state-published"
+           title="Before you add colourants, opacifiers etc to a glaze
+
+">
+            <img width="16" height="16" src="../../document_icon.gif" alt="Document" />
+            <span>The Base Glaze</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeCurrentNode">
+
+    
+
+      <div>
+
+        <a href="inside-the-base-glaze.html"
+           class="state-published navTreeCurrentItem navTreeCurrentNode"
+           title="The variables in the base glaze, and how we separate them out to study their effect">
+            <img width="16" height="16" src="../../document_icon.gif" alt="Document" />
+            <span>Inside the Base Glaze</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+      <div>
+
+        <a href="the-grid-layout.html"
+           class="state-published"
+           title="Different grids are always laid out in the same pattern, leading to a consistent result that is easy to interpret.">
+            <img width="16" height="16" src="../../document_icon.gif" alt="Document" />
+            <span>The Grid Layout</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+      <div>
+
+        <a href="getting-the-35-recipes.html"
+           class="state-published"
+           title="Another great advantage to the standardized format it that we can generate all of the glaze recipes from Glaze C.  There are several way to get the 35 recipes for any standard grid.">
+            <img width="16" height="16" src="../../document_icon.gif" alt="Document" />
+            <span>Getting the 35 Recipes</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker">
+
+    
+
+      <div>
+
+        <a href="01.html"
+           class="state-published"
+           title="A closer look at how the Grid Method works.  For a briefer summary of the method, see The Grid Method, while Standing on One Leg, starting with The Main Variables.">
+            <img width="16" height="16" src="../../document_icon.gif" alt="Document" />
+            <span>The Grid Method, while Sitting Down</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+
+
+    </ul>
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish">
+
+    
+
+      <div>
+
+        <a href="../grid-tile-images.html"
+           class="state-published navTreeFolderish"
+           title="WORK IN PROGRESS - We are working to make the data available for these grid tiles as soon as possible.  Each image shows a grid tile (sometimes more than one) that represents a family of glazes based on a single set of fluxes.  All 35 glazes in each grid have the same set of fluxes, in the same proportions.  The only variables are alumina and silica, alumina increasing up the tile and silica increasing left to right.  So each tile is like the visualization of an alumina/silica graph for a particular set of fluxes.  In many cases the glazes include colourants and/or opacifiers.  If these are included they do not vary across the set; all 35 glazes will have the same percentage of each.">
+            <img width="16" height="16" src="../../folder_icon.gif" alt="Folder" />
+            <span>Grid Tile Images</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish">
+
+    
+
+      <div>
+
+        <a href="../some-glaze-principles.html"
+           class="state-published navTreeFolderish"
+           title="In this folder we see how the Grid Method reveals important glaze principles.  These are illustrated with images of grid tiles and other experiments and fired ceramic pieces.">
+            <img width="16" height="16" src="../../folder_icon.gif" alt="Folder" />
+            <span>Glaze Principles</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish">
+
+    
+
+      <div>
+
+        <a href="../making-tiles-glazing-them.html"
+           class="state-published navTreeFolderish"
+           title="How to make your tiles">
+            <img width="16" height="16" src="../../folder_icon.gif" alt="Folder" />
+            <span>Making Tiles &amp; Glazing Them</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish">
+
+    
+
+      <div>
+
+        <a href="../diagrams-and-images-for-understanding-glazes.html"
+           class="state-published navTreeFolderish"
+           title="Diagrams and Images for Glazes Folder">
+            <img width="16" height="16" src="../../folder_icon.gif" alt="Folder" />
+            <span>Diagrams/Images</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+
+
+    </ul>
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish">
+
+    
+
+      <div>
+
+        <a href="../../gallery.html"
+           class="state-published navTreeFolderish" title="">
+            <img width="16" height="16" src="../../folder_icon.gif" alt="Folder" />
+            <span>Gallery</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish">
+
+    
+
+      <div>
+
+        <a href="../../workshops.html"
+           class="state-published navTreeFolderish" title="">
+            <img width="16" height="16" src="../../folder_icon.gif" alt="Folder" />
+            <span>Workshops</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish">
+
+    
+
+      <div>
+
+        <a href="../../books.html"
+           class="state-published navTreeFolderish" title="">
+            <img width="16" height="16" src="../../folder_icon.gif" alt="Folder" />
+            <span>Books</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish">
+
+    
+
+      <div>
+
+        <a href="../../resources.html"
+           class="state-published navTreeFolderish" title="">
+            <img width="16" height="16" src="../../folder_icon.gif" alt="Folder" />
+            <span>Resources</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+<li class="navTreeItem visualNoMarker navTreeFolderish">
+
+    
+
+      <div>
+
+        <a href="../../about-ian.html"
+           class="state-published navTreeFolderish" title="">
+            <img width="16" height="16" src="../../folder_icon.gif" alt="Folder" />
+            <span>About Ian</span>
+        </a>
+        
+    </div>
+
+    
+    
+</li>
+
+
+
+
+        </ul>
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+</dl>
+
+</div>
+
+<div id="portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f506c6f6e650a736561726368"
+     class="portletWrapper kssattr-portlethash-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f506c6f6e650a736561726368"><dl class="portlet portletSearch">
+
+  <dt class="portletHeader">
+      <span class="portletTopLeft"></span>
+      <a class="tile" href="http://glazes.org/search_form.html">Search</a>
+      <span class="portletTopRight"></span>
+  </dt>
+
+    <dd class="portletItem">
+      <form name="searchform"
+            action="http://glazes.org/search">
+        <div class="LSBox">
+          <input class="inputLabel searchField portlet-search-gadget"
+                 name="SearchableText" type="text" size="15"
+                 title="Search Site" />
+          <input class="searchButton" type="submit"
+                 value="Search" />
+  
+          <div class="LSResult" style="">
+            <div class="LSShadow"></div>
+          </div>
+        </div>
+      </form>
+      <div class="visualClear"><!-- --></div>
+    </dd>
+    
+    <dd class="portletFooter">
+        <a href="http://glazes.org/search_form.html" class="tile">
+        Advanced Search&hellip;
+        </a>
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+</dl>
+</div>
+
+<div id="portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f506c6f6e650a6c6f67696e"
+     class="portletWrapper kssattr-portlethash-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f506c6f6e650a6c6f67696e">
+
+<dl class="portlet portletLogin">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <a href="http://glazes.org/login_form.html" class="tile">Log in</a>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem odd">
+        <form action="http://glazes.org/login_form"
+              name="loginform" method="post">
+
+            <input type="hidden" name="form.submitted" value="1" />
+            <input type="hidden" name="came_from"
+                   value="inside-the-base-glaze.html" />
+            <input type="hidden" name="js_enabled" id="js_enabled" value="0" />
+            <input type="hidden" name="cookies_enabled" id="cookies_enabled" value="" />
+            <input type="hidden" name="login_name" id="login_name" value="" />
+            <input type="hidden" name="pwd_empty" id="pwd_empty" value="0" />
+
+            <div class="field">
+                <label for="__ac_name">Login Name</label>
+                <br />
+                <input type="text" size="10"
+                       alt="Login Name" name="__ac_name"
+                       value="" id="__ac_name" />
+            </div>
+            
+            <div class="field">
+                <label for="__ac_password">Password</label>
+                <br />
+                <input type="password" size="10"
+                       alt="Password" name="__ac_password"
+                       id="__ac_password" />
+            </div>
+
+            <div class="cookiesMessage portalMessage"
+                 style="display:none">
+                Cookies are not enabled. You must enable cookies before you
+                can log in.
+            </div>
+            
+            <div class="formControls">
+            
+                <input class="context" type="submit"
+                       name="submit" value="Log in"
+                       alt="Log in" />
+            </div>
+        </form>
+    </dd>
+    
+    <dd class="portletItem even">
+        <a href="http://glazes.org/mail_password_form.html"
+           class="tile">
+           <img src="../../info_icon.gif" alt="" title="" height="16" width="16" />
+           Forgot your password?
+        </a>
+    </dd>
+    
+    
+</dl>
+
+
+
+
+</div>
+
+
+<div class="managePortletsLink">
+  
+</div>
+
+                
+                &nbsp;
+              </div>
+            </td>
+            
+
+            
+            <td id="portal-column-content">
+
+              
+                <div class="">
+
+                  
+
+
+                  <div id="region-content" class="documentContent">
+
+                    <span id="contentTopLeft"></span>
+                    <span id="contentTopRight"></span>
+                    
+                    <a name="documentContent"></a>
+
+                    
+
+    <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
+        <dt>Info</dt>
+        <dd></dd>
+    </dl>
+
+
+                    
+                    <div id="viewlet-above-content"></div>
+
+                    
+                    
+                    <div id="content">
+                      
+                      
+    
+
+        
+
+        <h1 class="documentFirstHeading"> 
+            
+        <span class="" id="parent-fieldname-title">
+            Inside the Base Glaze
+        </span>
+    
+        </h1>
+
+        
+
+
+
+        <p class="documentDescription">
+            
+        <span class="" id="parent-fieldname-description">
+            The variables in the base glaze, and how we separate them out to study their effect
+        </span>
+    
+        </p>
+
+        
+
+
+
+        
+
+        
+        <div class="" id="parent-fieldname-text">
+            
+<p><strong>There are three variables in the base glaze:</strong></p>
+<ol><li><strong>Flux</strong> (the melter)</li><li><strong>Alumina</strong> (the stiffener)</li><li><strong>Silica</strong> (the glass former)</li></ol>
+<p>These three descriptions, melter, stiffener and glass former, explain the main role of each, but it is important to understand that they do much more than melt, stiffen and form glass.&nbsp; The complete story is revealed by looking at the fired grid tile.</p>
+<h3>The Grid</h3>
+<p>One of the advantages of this method is that it provides a way of looking at the effects of flux, alumina and silica in a simple graph format.&nbsp; We want to change just one thing at a time so we can see cause and effect.&nbsp;</p>
+<p><img class="image-inline" src="diagrams-and-images-for-understanding-glazes/ABCD-ZonesBalanced.gif/image_preview.png" alt="ABCD&amp;ZonesBalanced.gif" /></p>
+<p>We can lay out two independent variables on this rectangular format and have one variable going left to right (Quartz) and the other bottom to top (Kaolin). We move up the grid by adding kaolin, which is our source of <strong>variable alumina</strong>. We move across the grid from left to right by adding quartz, which is our source of <strong>variable silica</strong>.<a title="The Grid Layout" class="internal-link" href="the-grid-layout.html"><strong></strong></a></p>
+
+            
+        </div>
+    
+
+        <div class="relatedItems">
+    
+        
+            
+        
+    
+</div>
+    
+        <div class="visualClear"><!-- --></div>
+<div class="documentActions">
+    
+
+    <h5 class="hiddenStructure">Document Actions</h5>
+
+    <ul>
+    
+        <li id="document-action-sendto">
+            <a href="http://glazes.org/understanding-glazes/the-grid-method/inside-the-base-glaze/sendto_form.html"
+               title="">Send this</a>
+        </li>
+    
+    
+        <li id="document-action-print">
+            <a href="javascript:this.print();" title="">Print this</a>
+        </li>
+    
+
+    </ul>
+    
+
+    
+
+</div>
+
+<div class="reviewHistory" id="review-history">
+    
+</div>
+
+
+    
+
+                    </div>
+                    
+
+                    
+                    
+                      
+    
+
+
+
+    
+
+        <div class="listingBar">
+
+          
+            <a class="listingPrevious"
+               href="base-glaze.html"
+               title="Go to previous item">
+               <img src="../../arrowLeft.gif"
+                    alt="Left arrow" />
+
+                
+                Previous:  The Base Glaze
+            </a>
+          
+
+
+            <a class="listingNext"
+               href="the-grid-layout.html"
+               title="Go to next item">
+               <span>Next: </span> The Grid Layout
+               <img src="../../arrowRight.gif"
+                    alt="Right arrow" />
+            </a>
+
+
+          &nbsp;
+
+       </div>
+
+   
+
+
+                    
+                    
+
+                    <span id="contentBottomLeft"></span>
+                    <span id="contentBottomRight"></span>
+
+                  </div>
+
+                </div>
+
+              
+            </td>
+            
+
+            
+            
+            
+          </tr>
+        </tbody>
+      </table>
+      
+
+      <div class="visualClear" id="clear-space-before-footer"><!-- --></div>
+      
+      
+
+      
+
+        <div id="portal-footer">
+
+<p>
+    
+    The
+    <a href="http://plone.org/">Plone<sup>&reg;</sup> CMS &mdash; Open Source Content Management System</a>
+    is
+    <acronym title="Copyright">&copy;</acronym>
+    2000-2008
+    by the
+    <a href="http://plone.org/foundation">Plone Foundation</a>
+    et al.
+    
+</p>
+
+<p>
+    
+    Plone<sup>&reg;</sup> and the Plone logo are registered trademarks of the
+        <a href="http://plone.org/foundation">Plone Foundation</a>.
+    
+
+    
+    Distributed under the
+        <a href="http://creativecommons.org/licenses/GPL/2.0/">GNU GPL license</a>.
+    
+</p>
+
+</div>
+
+<ul id="portal-siteactions">
+
+    <li id="siteaction-sitemap"><a
+    href="../../sitemap.html" accesskey="3"
+    title="Site Map">Site Map</a></li>
+    <li id="siteaction-accessibility"><a
+    href="http://glazes.org/accessibility-info.html"
+    accesskey="0" title="Accessibility">Accessibility</a></li>
+    <li id="siteaction-contact"><a
+    href="http://glazes.org/contact-info.html" accesskey="9"
+    title="Contact">Contact</a></li>
+
+</ul>
+
+  <div id="portal-colophon">
+      
+
+      
+
+      <div class="colophonWrapper">
+      <ul>
+        <li>
+          <a href="http://plone.org/"
+             title="This site was built using Plone CMS, the Open Source Content Management System. Click for more information.">
+            Powered by Plone</a>
+        </li>
+        <li>
+          <a href="http://validator.w3.org/check/referer"
+             title="This site is valid XHTML.">
+            Valid XHTML</a>
+        </li>
+        <li>
+          <a href="http://jigsaw.w3.org/css-validator/check/referer&amp;warning=no&amp;profile=css3&amp;usermedium=all"
+             title="This site was built with valid CSS.">
+            Valid CSS</a>
+        </li>
+        <li>
+          <a href="http://www.section508.gov/"
+             title="This site conforms to the US Government Section 508 Accessibility Guidelines.">
+            Section 508</a>
+        </li>
+        <li>
+          <a href="http://www.w3.org/WAI/WCAG1AA-Conformance"
+             title="This site conforms to the W3C-WAI Web Content Accessibility Guidelines.">
+            WCAG</a>
+        </li>
+      </ul>
+      </div>
+
+    </div>
+
+
+
+      
+
+      <div class="visualClear"><!-- --></div>
+    </div>
+<div id="kss-spinner"><img alt=""
+                           src="../../spinner.gif" /></div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6746634-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+
+
+<!-- Mirrored from glazes.org/understanding-glazes/the-grid-method/inside-the-base-glaze by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 29 Nov 2008 00:39:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>
+
+
